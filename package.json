@@ -5,8 +5,10 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.16.4",
     "@testing-library/user-event": "^13.5.0",
-    "antd": "^5.20.3",
     "daisyui": "^4.12.10",
     "i18next": "^23.12.3",
     "i18next-browser-languagedetector": "^8.0.0",
@@ -14,7 +16,6 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^15.0.1",
     "react-router-dom": "^6.26.0",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.6.0",
     "workbox-broadcast-update": "^6.6.0",
@@ -31,10 +32,9 @@
     "zustand": "^4.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +55,10 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "vite": "^5.3.5"
   }
 }

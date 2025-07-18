@@ -1,12 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Layout, Menu } from "antd"; // Importing Ant Design components
-import Home from "./pages/Home";
-import About from "./pages/About";
+import { AppBar, Toolbar, Button, Container } from "@mui/material"; // Importing Material-UI components
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 import useHomeStore from "./stores/HomeStore";
 import useAboutStore from "./stores/AboutStore";
-
-const { Header, Content } = Layout; // Destructuring Ant Design Layout components
 
 function App() {
   const {
@@ -22,20 +20,19 @@ function App() {
 
   return (
     <Router>
-      <div className="">
-        <Header className="top-0">
-          {/* Using Ant Design Menu for navigation */}
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="1">
-              <Link to="/">Home</Link>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Link to="/about">About</Link>
-            </Menu.Item>
-          </Menu>
-        </Header>
+      <div>
+        <AppBar position="static">
+          <Toolbar>
+            <Button color="inherit" component={Link} to="/">
+              Home
+            </Button>
+            <Button color="inherit" component={Link} to="/about">
+              About
+            </Button>
+          </Toolbar>
+        </AppBar>
 
-        <Content className="container mx-auto">
+        <Container sx={{ mt: 4 }}>
           <Routes>
             <Route
               path="/"
@@ -58,7 +55,7 @@ function App() {
               }
             />
           </Routes>
-        </Content>
+        </Container>
       </div>
     </Router>
   );
