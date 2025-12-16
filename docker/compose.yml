@@ -1,0 +1,14 @@
+services:
+  eruiz-react-pwa:
+    container_name: eruiz-react-pwa
+    image: eruiz/react-pwa:alpha
+    build:
+      context: ..
+      dockerfile: docker/app.Dockerfile
+    ports:
+      - "3000:80"
+    #volumes:
+    #  - ../src:/app/src
+    #  - ../public:/app/public
+    restart: always
+
