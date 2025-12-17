@@ -39,7 +39,7 @@ To use this template, follow these steps:
 
 Your PWA will be running at `http://localhost:3000`. Open your browser and navigate to this URL to view the project in action.
 
-## Building and Deployment
+## Building and Deployment (on-premise option)
 
 To create a production-ready build of your project, run:
 
@@ -56,3 +56,25 @@ This is a public repository, but you can still make improvements and customizati
 ---
 
 Thank you for using this PWA React.js template with Tailwind CSS. Happy coding!
+
+
+## Building and runnin (Docker option)
+
+You can run it on docker!
+
+If you are familiar with (make)[https://en.wikipedia.org/wiki/Make_(software)] this Makefile will make your life easier:
+
+```
+--- Makefile for PWA React with Tailwind ---
+Commands available:
+
+  build   : Builds the Docker image .
+  run     : Starts the application containers. (Accessible at http://localhost:3000)
+  stop    : Stops the running containers.
+  clean   : Stops containers, removes volumes, and deletes the built image.
+
+  help    : Shows this help message.
+```
+
+All make commands are simple `docker compose` calls, just read `Makefile` to understand under the hood.
+
